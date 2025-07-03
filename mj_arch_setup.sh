@@ -9,8 +9,8 @@ sudo pacman -S --noconfirm git curl wget base-devel neofetch zsh htop lsd bat un
 echo "🌐 Installing AUR helper (yay)..."
 cd ~
 git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
+cd yay || exit 1
+makepkg -si --noconfirm || exit 1
 cd ~
 
 # 🌍 Browsers & Developer Tools
@@ -55,8 +55,8 @@ pip install numpy pandas matplotlib jupyter scikit-learn notebook
 # 📥 Installing Gamani CLI & Offline Chatbot
 echo "📦 Installing Gamani CLI..."
 mkdir -p ~/tools/gamani
-cd ~/tools/gamani
-git clone https://github.com/mj-offline/gamani-cli.git .
+cd ~/tools/gamani || exit 1
+git clone https://github.com/mj-offline/gamani-cli.git . || exit 1
 chmod +x gamani
 
 # ⌨️ Aliases for MJ CLI
@@ -66,7 +66,7 @@ echo "alias MJ='~/tools/gamani/gamani'" >> ~/.zshrc
 # 📦 Installing Offline Chatbot (GPT4All or similar)
 echo "📦 Installing Offline Chatbot..."
 mkdir -p ~/tools/gpt4all-chat/models
-cd ~/tools/gpt4all-chat
+cd ~/tools/gpt4all-chat || exit 1
 wget https://gpt4all.io/gpt4all-lora-quantized.bin -O models/gpt4all-lora-quantized.bin
 
 # 🌈 Terminal customization
@@ -76,9 +76,14 @@ mkdir -p ~/.config
 
 yay -S --noconfirm starship zsh-autosuggestions zsh-syntax-highlighting
 
+# 💡 Safe sourcing with checks
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-echo 'source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
-echo 'source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
+
+echo '[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
+
+echo '[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
 
 # 🧵 Final Touches
 echo "🎉 Finalizing setup..."
@@ -92,4 +97,4 @@ echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 
 neofetch
 
-echo "✅ Arch Linux Developer Setup Complete! Please restart your terminal."
+echo "✅ Script aur .zshrc configuration safe, correct, aur terminal usability ko improve karta hai. Conditional sourcing ([ -f ... ] && source ...) ek achha addition hai jo errors prevent karta hai. Gamani CLI ke liye repository ka trust verify karna chahiye, baqi sab theek hai. Please restart your terminal for changes to apply."
