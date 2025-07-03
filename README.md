@@ -20,7 +20,8 @@ This is a custom Bash script to automatically install all my essential tools, so
 
 ### 1️⃣ Download the script
 ```bash
-curl -O https://raw.githubusercontent.com/<your-username>/mj-arch-setup/main/mj_arch_setup.sh
+curl -O https://raw.githubusercontent.com/JawadAbbasi14/mj-arch-setup/main/mj_arch_setup.sh
+
 ```
 
 ### 2️⃣ Make the script executable
