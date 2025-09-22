@@ -3,7 +3,7 @@
 # 📦 System update & essentials
 echo "🔧 Updating system and installing core packages..."
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm git curl wget base-devel neofetch zsh htop lsd bat unzip zip jq fzf ripgrep python python-pip nodejs npm zoxide starship
+sudo pacman -S --noconfirm git curl wget base-devel neofetch zsh htop lsd bat unzip zip jq fzf ripgrep python python-pip nodejs npm zoxide starship alacritty vlc pavucontrol xfce4-taskmanager thunar-archive-plugin
 
 # 🌐 AUR Helper (yay)
 echo "🌐 Installing AUR helper (yay)..."
@@ -16,16 +16,12 @@ cd ~
 # 🌍 Browsers & Developer Tools
 echo "🌍 Installing browsers and dev tools..."
 yay -S --noconfirm \
-  google-chrome \
-  visual-studio-code-bin \
-  postman \
-  insomnia \
-  brave-bin \
-  firefox-developer-edition
+  firefox-developer-edition \
+  vscodium-bin
 
 # 🛢️ Databases & Servers
 echo "🛢️ Installing databases..."
-sudo pacman -S --noconfirm postgresql mariadb sqlite redis
+sudo pacman -S --noconfirm postgresql sqlite redis
 
 # PostgreSQL setup
 echo "🛠️ Configuring PostgreSQL..."
@@ -92,9 +88,9 @@ echo "alias cat='bat'" >> ~/.zshrc
 echo "alias gs='git status'" >> ~/.zshrc
 echo "alias python=python3" >> ~/.zshrc
 echo "alias pip=pip3" >> ~/.zshrc
-echo "export EDITOR=code" >> ~/.zshrc
+echo "export EDITOR=codium" >> ~/.zshrc
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 
 neofetch
 
-echo "✅ Script aur .zshrc configuration safe, correct, aur terminal usability ko improve karta hai. Conditional sourcing ([ -f ... ] && source ...) ek achha addition hai jo errors prevent karta hai. Gamani CLI ke liye repository ka trust verify karna chahiye, baqi sab theek hai. Please restart your terminal for changes to apply."
+echo "✅ Optimized setup complete! Lightweight + developer-friendly. Restart terminal to apply changes."
