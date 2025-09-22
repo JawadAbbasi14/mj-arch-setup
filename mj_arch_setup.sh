@@ -17,7 +17,7 @@ cd ~
 echo "🌍 Installing browsers and dev tools..."
 yay -S --noconfirm \
   firefox-developer-edition \
-  vscodium-bin
+  visual-studio-code-bin
 
 # 🛢️ Databases & Servers
 echo "🛢️ Installing databases..."
@@ -66,7 +66,7 @@ cd ~/tools/gpt4all-chat || exit 1
 wget https://gpt4all.io/gpt4all-lora-quantized.bin -O models/gpt4all-lora-quantized.bin
 
 # 🌈 Terminal customization
-echo "🎨 Setting up beautiful hacker terminal..."
+echo "🎨 Setting up hacker terminal..."
 chsh -s $(which zsh)
 mkdir -p ~/.config
 
@@ -88,9 +88,9 @@ echo "alias cat='bat'" >> ~/.zshrc
 echo "alias gs='git status'" >> ~/.zshrc
 echo "alias python=python3" >> ~/.zshrc
 echo "alias pip=pip3" >> ~/.zshrc
-echo "export EDITOR=codium" >> ~/.zshrc
+echo "export EDITOR=code" >> ~/.zshrc
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 
 neofetch
 
-echo "✅ Optimized setup complete! Lightweight + developer-friendly. Restart terminal to apply changes."
+echo "✅ Super Optimized setup complete! Lightweight + full developer stack ready for AI, Cybersecurity & Fullstack learning."
