@@ -1,35 +1,83 @@
 # 🚀 MJ Arch Auto Setup Script
 
-This is a custom Bash script to automatically install all my essential tools, software, and configurations after a fresh Arch Linux installation.
+Ye script ek **full Arch Linux auto-setup** hai jo tumhare liye sab essential tools, dev languages, databases, aur AI/ML libraries install aur configure kar dega. Sirf ek command run karo aur tumhara Arch environment hacker-style ready ho jayega 🔥
 
 ---
 
 ## 🛠️ What It Installs
 
-- System utilities: `git`, `curl`, `wget`, `base-devel`, `htop`, `zsh`, `neofetch`, `lsd`, `bat`, `jq`, `fzf`, `ripgrep`, `unzip`, `zip`, `zoxide`, `starship`
-- AUR helper: `yay`
-- Browsers and dev tools: `Google Chrome`, `VS Code`, `Postman`, `Insomnia`, `Brave`, `Firefox Developer Edition`
-- Databases: `PostgreSQL`, `MariaDB`, `SQLite`, `Redis`
-- Development languages: `Python`, `Node.js`, `Rust`, `Go`, `Docker`
-- Offline CLI tools: `Gamani CLI`, `Offline Chatbot (GPT4All)`
-- Terminal customizations: ZSH shell with plugins, hacker-style prompt, aliases
+### 🖥️ System Utilities
+
+* `git`, `curl`, `wget`, `base-devel`, `htop`, `zsh`, `neofetch`, `lsd`, `bat`, `jq`, `fzf`, `ripgrep`, `unzip`, `zip`, `zoxide`, `starship`
+
+### 🌐 AUR Helper
+
+* `yay` (Arch User Repository ke liye, auto install hota hai)
+
+### 🌍 Browsers & Dev Tools
+
+* `Google Chrome`
+* `Brave Browser`
+* `Firefox Developer Edition`
+* `Visual Studio Code (bin)`
+* `Postman`
+* `Insomnia`
+
+### 🛢️ Databases
+
+* `PostgreSQL` (auto init + service enabled)
+* `MariaDB`
+* `SQLite`
+* `Redis`
+
+### 💻 Development Languages & Tools
+
+* **Python 3.10 + pip** (AI/ML models ke liye best LTS version, TensorFlow & PyTorch supported)
+* `Node.js` + `npm`
+* `Rust` (via rustup, latest stable)
+* `Go`
+* `Docker` + `Docker Compose` (enabled & added to user group)
+* `libvirt`, `qemu`, `virt-manager` (VMs ke liye)
+
+### 🤖 AI / ML Python Packages (User-level, not system-wide)
+
+* `numpy`
+* `pandas`
+* `matplotlib`
+* `scikit-learn`
+* `notebook`
+* `jupyter`
+
+### 🛠️ Offline Dev Tools
+
+* **Gamani CLI** (custom tool, alias `mj` / `MJ`)
+* **GPT4All (offline chatbot)** with local model folder ready
+
+### 💻 Terminal Customization
+
+* ZSH default shell
+* `starship` hacker prompt
+* `zsh-autosuggestions`, `zsh-syntax-highlighting`
+* Custom aliases (`ll`, `cat`, `gs`, `python`, `pip`)
 
 ---
 
 ## ⚙️ How to Use (Only 3 Steps!)
 
 ### 1️⃣ Download the script
+
 ```bash
 curl -O https://raw.githubusercontent.com/JawadAbbasi14/mj-arch-setup/main/mj_arch_setup.sh
-
 ```
 
 ### 2️⃣ Make the script executable
+
 ```bash
 chmod +x mj_arch_setup.sh
 ```
 
 ### 3️⃣ Run the script
+
 ```bash
 ./mj_arch_setup.sh
 ```
@@ -38,17 +86,24 @@ chmod +x mj_arch_setup.sh
 
 ## ✅ After Setup
 
-- Run `mj` or `MJ` in terminal to open Gamani CLI 🟢
-- PostgreSQL is installed and ready to use 🔄
-- Hacker terminal is enabled with `starship`, `neofetch`, syntax highlighting, and autosuggestions 💻
-- Offline chatbot model is placed in `~/tools/gpt4all-chat/models/`
+* Run `mj` or `MJ` in terminal to launch **Gamani CLI** 🟢
+* PostgreSQL aur MariaDB auto-enabled services ke sath ready honge 🔄
+* Python 3.10 ke sath **AI/ML ready environment** milega (PyTorch / TensorFlow supported) 🧠
+* Hacker terminal enabled with:
+
+  * `starship` hacker prompt
+  * `neofetch`
+  * `autosuggestions`
+  * `syntax highlighting`
+* Offline chatbot model path: `~/tools/gpt4all-chat/models/`
 
 ---
 
 ### 🧠 Perfect For:
-- Arch Linux developers
-- AI/ML coders
-- Full-stack devs
-- Terminal hackers who love customization
+
+* Arch Linux developers
+* AI/ML coders (TensorFlow, PyTorch, Jupyter)
+* Full-stack devs (Databases + Docker + Node + Go + Rust)
+* Terminal hackers who love customization
 
 > Made with 💥 by MJ (for a blazing-fast Arch Dev Experience)
