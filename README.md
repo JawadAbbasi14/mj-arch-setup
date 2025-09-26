@@ -78,19 +78,19 @@ Ye script tumhare Arch Linux system ko ek complete **development environment** b
 1. Script download karo:
 
    ```bash
-   curl -O https://raw.githubusercontent.com/JawadAbbasi14/mj-arch-setup/main/setup.sh
+   curl -o mj_arch_setup.sh https://raw.githubusercontent.com/JawadAbbasi14/mj-arch-setup/main/setup.sh
    ```
 
 2. Executable banao:
 
    ```bash
-   chmod +x setup.sh
+   chmod +x mj_arch_setup.sh
    ```
 
 3. Run karo:
 
    ```bash
-   ./setup.sh
+   ./mj_arch_setup.sh
    ```
 
 ---
@@ -114,4 +114,4 @@ Ye script tumhare Arch Linux system ko ek complete **development environment** b
 
 ---
 
-⚡ Smooth aur clean environment — extra browsers (Chrome, Brave, etc.) hata diye gaye hain. Sirf **essential dev t
+⚡ Smooth aur clean environment — extra browsers (Chrome, Brave, etc.) hata diye gaye hain
