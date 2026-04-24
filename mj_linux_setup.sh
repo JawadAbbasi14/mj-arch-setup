@@ -1,15 +1,5 @@
 #!/bin/bash
-# =============================================================================
-# MJ Dev Environment Setup Script
-# Author: MJ (mj-offline)
-# Description: One-shot developer environment setup for major Linux distros
-# Supports: Arch, Ubuntu/Debian, Fedora, RHEL/CentOS, openSUSE
-# =============================================================================
 
-# -----------------------------------------------------------------------------
-# FIX #1: Removed 'set -euo pipefail' — it conflicts with '|| true' pattern
-# and causes unexpected exits. We handle errors manually per-command instead.
-# -----------------------------------------------------------------------------
 
 SUCCESS_LIST=()
 FAIL_LIST=()
