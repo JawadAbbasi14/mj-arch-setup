@@ -77,13 +77,14 @@ cd gamani-cli
 ### Step 2 — Make It Executable
 
 ```bash
-chmod +x setup.sh
+chmod +x mj_linux_setup.sh
+bash mj_linux_setup.sh
 ```
 
 ### Step 3 — Run the Script
 
 ```bash
-bash setup.sh
+bash mj_linux_setup.sh
 ```
 
 > ⚠️ **Do NOT run as root (`sudo bash setup.sh`).** The script will ask for sudo when needed internally.
